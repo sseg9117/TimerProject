@@ -7,6 +7,7 @@
 //
 
 #include "Controller.hpp"
+
 using namespace std;
 
 void Controller :: start()
@@ -31,5 +32,23 @@ void Controller :: start()
 
 void Controller :: findMaxAndMin()
 {
+    vector<CrimeData> FileController :: readCrimeDataToVector("/Users/sseg9117/Documents/Data Structures/TimerProject/TimerProject/Data/crime.csv");
     
+    int minIndex = 0;
+    int maxIndex = 0;
+    
+    for (int index = 1; index < myData.size(); index++)
+    {
+        if (myData [minIndex] < myData [index])
+        {
+            minIndex = index;
+        }
+        if (myData [maxIndex] > myData[index])
+        {
+            maxIndex = index;
+        }
+    }
+        searchTimer.stopTimer();
+        cout << "The smallest Crime stat is at " << minIndex << " and it is: " << myData[minIndex] << endl;
+        cout << "The largest Crime stat is at " << maxIndex << " and it is: "<< myData[maxIndex] << endl;
 }

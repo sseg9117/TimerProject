@@ -8,15 +8,14 @@
 
 #include "FileController.hpp"
 
-using namespace std;
 
 vector<CrimeData> FileController :: readCrimeDataToVector(string fileName)
 {
-    vector<CrimeData> crimeVector;
+    std :: vector<CrimeData> crimeVector;
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(fileName);
     
     //If the file exists at that path
     if (dataFile.is_open())
@@ -24,7 +23,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string fileName)
         //eof means end of file
         while (!dataFile.eof())
         {
-            getLine(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             if (rowCount != 0)
             {
                 //Create a CrimeData instance from the line
@@ -33,14 +32,14 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string fileName)
             }
             rowCount++;
         }
-        datafile.close();
+        dataFile.close();
     }
-    else()
+    else
     {
-        cerr << "NO FILE" ,, endl;
+        cerr << "NO FILE" << endl;
     }
     
-    return crimeVector
+    return crimeVector;
 }
 
 

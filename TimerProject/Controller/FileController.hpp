@@ -13,15 +13,18 @@
 #include <stdio.h>
 #include <string>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include <vector>
 #include <sstream>
 
-class FileController()
+using namespace std;
+
+class FileController
 {
 public:
     static vector<CrimeData> readCrimeDataToVector(string filename);
     
-}
+};
 
 #endif /* FileController_hpp */
