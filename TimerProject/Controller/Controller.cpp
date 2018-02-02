@@ -22,7 +22,7 @@ void Controller :: start()
     codeTimer.resetTimer();
     
     codeTimer.startTimer();
-    for(int i = 0; i < 100; i++)
+    for(int i = 0; i < 216; i++)
     {
         cout << "index is at " << i << "\t";
     }
