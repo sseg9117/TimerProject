@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B24A70512024B0550033E954 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B24A704F2024B0550033E954 /* FileController.cpp */; };
-		B26EB0422023736D009F1607 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26EB0402023736D009F1607 /* Controller.cpp */; };
 		B26EB0462023738E009F1607 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26EB0442023738E009F1607 /* Timer.cpp */; };
 		B2E563972024B74D00846821 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E563952024B74D00846821 /* CrimeData.cpp */; };
+		B2E563A02024BDBF00846821 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E5639F2024BDBF00846821 /* Runner.cpp */; };
+		B2E563A22024BF0B00846821 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2E563A12024BF0B00846821 /* Controller.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,13 +30,14 @@
 		B24A704F2024B0550033E954 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
 		B24A70502024B0550033E954 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
 		B26EB02F202372DD009F1607 /* TimerProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TimerProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		B26EB0402023736D009F1607 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		B26EB0412023736D009F1607 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		B26EB0442023738E009F1607 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		B26EB0452023738E009F1607 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		B2E563942024B74D00846821 /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = crime.csv; path = TimerProject/Data/crime.csv; sourceTree = SOURCE_ROOT; };
 		B2E563952024B74D00846821 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = TimerProject/Data/CrimeData.cpp; sourceTree = SOURCE_ROOT; };
 		B2E563962024B74D00846821 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = TimerProject/Data/CrimeData.hpp; sourceTree = SOURCE_ROOT; };
+		B2E5639F2024BDBF00846821 /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
+		B2E563A12024BF0B00846821 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		B26EB031202372DD009F1607 /* TimerProject */ = {
 			isa = PBXGroup;
 			children = (
+				B2E5639F2024BDBF00846821 /* Runner.cpp */,
 				B24A70592024B6CE0033E954 /* Data */,
 				B26EB03F2023735F009F1607 /* Controller */,
 			);
@@ -88,8 +91,8 @@
 		B26EB03F2023735F009F1607 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2E563A12024BF0B00846821 /* Controller.cpp */,
 				B26EB04320237371009F1607 /* Tools */,
-				B26EB0402023736D009F1607 /* Controller.cpp */,
 				B26EB0412023736D009F1607 /* Controller.hpp */,
 				B24A704F2024B0550033E954 /* FileController.cpp */,
 				B24A70502024B0550033E954 /* FileController.hpp */,
@@ -164,8 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26EB0462023738E009F1607 /* Timer.cpp in Sources */,
+				B2E563A02024BDBF00846821 /* Runner.cpp in Sources */,
+				B2E563A22024BF0B00846821 /* Controller.cpp in Sources */,
 				B2E563972024B74D00846821 /* CrimeData.cpp in Sources */,
-				B26EB0422023736D009F1607 /* Controller.cpp in Sources */,
 				B24A70512024B0550033E954 /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

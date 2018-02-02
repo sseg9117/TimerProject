@@ -10,13 +10,12 @@
 #define FileController_hpp
 
 #include "../Data/CrimeData.hpp"
-#include <stdio.h>
 #include <string>
 #include <fstream>
 #include <sstream>
 #include <iostream>
 #include <vector>
-#include <sstream>
+
 
 using namespace std;
 
