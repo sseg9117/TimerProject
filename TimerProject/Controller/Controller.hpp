@@ -10,9 +10,13 @@
 #define Controller_hpp
 #include "Tools/Timer.hpp"
 #include <iostream>
+#include <vector>
+#include FileController.hpp
 
 class Controller
 {
+private:
+    void findMaxAndMin();
 public:
     void start();
 };

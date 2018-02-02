@@ -28,3 +28,8 @@ void Controller :: start()
     codeTimer.stopTimer();
     codeTimer.displayInformation();
 }
+
+void Controller :: findMaxAndMin()
+{
+    
+}
