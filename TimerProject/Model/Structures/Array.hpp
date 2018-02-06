@@ -31,7 +31,7 @@ public:
     ~Array<Type>(); //Take memory away from the object
     
     //Operators
-    Array<Type> & operator = (cons Array<Type> & toReplace);
+    Array<Type> & operator = (cons Array<Type> & toReplace); //overloading operators
     Type& operator [] (int index);
     Type operator [] (int index) const;
     
@@ -125,5 +125,11 @@ void Array<type> :: setAtIndex(int pos, Type item)
 {
     assert(pos >= 0 && pos < size);
     internalArray[pos] = item;
+}
+
+template <class Type>
+Array<Type> :: ~Array()
+{
+    delete [] internalArray;
 }
 #endif /* Array_h */
