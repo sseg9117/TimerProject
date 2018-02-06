@@ -6,12 +6,14 @@
 //  Copyright © 2018 Segota, Sheradon. All rights reserved.
 //
 
-#ifndef Array_h
-#define Array_h
+
 #include <assert.h> //Used for validating user supplied data.
 #include <iostream> //Used for tracing and debug statements.
 
 using namespace std;
+
+#ifndef Array_h
+#define Array_h
 
 template <class Type>
 class Array
@@ -21,12 +23,12 @@ private:
     int size;
 public:
     //Constuctor
-    Array<type>(int size);
+    Array<type>(int size); //sets the size
     
     //Copy Constructor
-    Array<Type>(const Array<Type> & toCopy);
+    Array<Type>(const Array<Type> & toCopy); //& is also refernce const means it cant chang.
     //Destructor
-    ~Array<Type>();
+    ~Array<Type>(); //Take memory away from the object
     
     //Operators
     Array<Type> & operator = (cons Array<Type> & toReplace);
@@ -38,6 +40,7 @@ public:
     Type getFromIndex(int index);
     void setAtIndex(int index, Type data);
 };
+
 template <class Type>
 Array<Type> :: Array(int size)
 {
@@ -46,6 +49,7 @@ Array<Type> :: Array(int size)
     
     internalArray = new Type[size];
 }
+
 template <class Type>
 Array<Type> :: Array(const Array<Type> & toCopy)
 {
@@ -59,11 +63,13 @@ Array<Type> :: Array(const Array<Type> & toCopy)
         internalArray[index] = toCopy[index];
     }
 }
+
 template <class Type>
 Array<Type> :: ~Array()
 {
     delete [] internalArray;
 }
+
 template <class Type>
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 {
@@ -83,6 +89,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
     }
     return *this;
 }
+
 template <class Type>
 Type & Array <Type> :: operator [] (int index)
 {
@@ -96,11 +103,13 @@ Type Array<Type> :: operator [] (int index) const
     assert(index >= 0 && index < size);
     return internalArray[index];
 }
+
 template <class Type>
 int Array<Type> :: getSize() const
 {
     return size;
 }
+
 template <class Type>
 Type Array<Type> :: getFromIndex(int index)
 {
@@ -110,6 +119,7 @@ Type Array<Type> :: getFromIndex(int index)
     
     return value;
 }
+
 template <class Type>
 void Array<type> :: setAtIndex(int pos, Type item)
 {
