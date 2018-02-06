@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../TimerProject/Data">
-   </FileRef>
-   <FileRef
-      location = "self:">
+      location = "self:/Users/sseg9117/Documents/Data Structures/TimerProject/DataStrutures.xcodeproj">
    </FileRef>
 </Workspace>

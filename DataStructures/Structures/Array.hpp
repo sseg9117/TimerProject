@@ -31,7 +31,7 @@ public:
     ~Array<Type>(); //Take memory away from the object
     
     //Operators
-    Array<Type> & operator = (cons Array<Type> & toReplace); //overloading operators
+    Array<Type> & operator = (const Array<Type> & toReplace); //overloading operators
     Type& operator [] (int index);
     Type operator [] (int index) const;
     
